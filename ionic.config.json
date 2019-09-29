@@ -1,0 +1,7 @@
+{
+  "name": "Moi Citoyen",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

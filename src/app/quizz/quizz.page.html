@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar color="primary" class="ion-text-center">
+        <ion-title>
+            Jouons !
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="play">
+
+    <ion-fab (click)="notify()" vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button>
+            <ion-icon name="notifications-outline"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+    <div class="question">
+        {{ currentQuestion.question }}
+    </div>
+
+    <div class="answerBox">
+        <div class="answer" *ngFor="let answer of answers; let i = index;" (click)="selectAnswer(i)">
+            {{ answer.label }}
+        </div>
+    </div>
+
+
+</ion-content>
+
+<ion-content class="ion-text-center" *ngIf="!play">
+    <img *ngIf="score >= 2" src="assets/win.svg" alt="">
+    <img *ngIf="score < 2" src="assets/loose.png" alt="">
+    <h2>C'est fini !</h2>
+    <h3>Votre score final est de {{ score }}/3 !</h3>
+    <ion-button primary (click)="playGame()">On rejoue ?</ion-button>
+</ion-content>

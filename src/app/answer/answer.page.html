@@ -1,0 +1,14 @@
+<ion-content class="ion-text-center">
+
+    <ion-fab (click)="close()" vertical="top" horizontal="end" slot="fixed">
+        <ion-fab-button>
+            <ion-icon name="close"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+    <img src="assets/answer.svg" alt="">
+    <h2>En effet,</h2>
+    <h3>{{ explication }}</h3>
+    <ion-button primary (click)="close()">Question suivante !</ion-button>
+
+</ion-content>

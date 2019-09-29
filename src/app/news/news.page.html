@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar color="primary" class="ion-text-center">
+        <ion-title>Actualités</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-fab (click)="notify()" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+        <ion-icon name="notifications-outline"></ion-icon>
+    </ion-fab-button>
+</ion-fab>
+
+<ion-content>
+    <ion-card class="welcome-card" *ngFor="let article of articles">
+        <img src="{{ article.image }}" alt="" />
+        <ion-card-header>
+            <ion-card-subtitle>{{ article.source }}</ion-card-subtitle>
+            <ion-card-title>{{ article.title }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <p>{{ article.content | slice:0:180 }}...</p>
+            <ion-button (click)="redirect(article.link)">Voir l'article</ion-button>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

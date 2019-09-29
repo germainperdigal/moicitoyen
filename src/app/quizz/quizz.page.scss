@@ -1,0 +1,58 @@
+.question {
+    height: 30vh;
+    width: 100vw;
+    margin-bottom: 2vh;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 2%;
+    -moz-box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    color: white;
+    font-weight: bolder;
+    background: url('../../assets/bg.png');
+    background-size: cover;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.answerBox {
+    height: 50vh;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.answer {
+    width: 98vw;
+    height: 12vh;
+    margin: 2vh auto;
+    text-align: center;
+    display: flex !important;
+    border-radius: 5px;
+    font-weight: bolder;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.answer:nth-child(1) {
+    background-color: #00853F;
+    color: white;
+}
+
+.answer:nth-child(2) {
+    background-color: #FDEF42;
+    color: white;
+}
+
+.answer:nth-child(3) {
+    background-color: #E31B23;
+    color: white;
+}
+
+img {
+    width: 80vw;
+    margin: 2vh auto;
+    height: auto;
+}
